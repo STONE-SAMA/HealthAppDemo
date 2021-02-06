@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <FrameLayout
+        android:id="@+id/fl_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></FrameLayout>
+
+    <RadioGroup
+        android:background="@drawable/draw_top_border"
+        android:id="@+id/rg_menu"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+    <RadioButton
+        android:id="@+id/rb_homePage"
+        style="@style/MenuRadioButton"
+        android:checked="true"
+        android:drawableTop="@drawable/menu_select_home"
+        android:text="首页"></RadioButton>
+
+    <View
+        style="@style/MenuRadioButton"></View>
+
+    <RadioButton
+        android:id="@+id/rb_user"
+        style="@style/MenuRadioButton"
+        android:drawableTop="@drawable/menu_select_user"
+        android:text="我的"></RadioButton>
+
+    </RadioGroup>
+
+    <ImageView
+        android:layout_marginBottom="5dp"
+        android:id="@+id/iv_menu"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="fitXY"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/transparent"
+        android:src="@drawable/add"></ImageView>
+
+</RelativeLayout>

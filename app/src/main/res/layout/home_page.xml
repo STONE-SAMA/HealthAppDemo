@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:background="@drawable/border"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+
+        <TextView
+            android:text="18851730833"
+            style="@style/food_record"
+            android:id="@+id/tv_userName"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></TextView>
+
+        <TextView
+            android:text="欢迎"
+            style="@style/food_record"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@id/tv_userName"
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></TextView>
+
+        <LinearLayout
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    style="@style/food_record"
+                    android:text="阶段"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"></TextView>
+
+                <TextView
+                    android:id="@+id/tv_stage"
+                    android:layout_marginTop="5dp"
+                    android:textSize="16dp"
+                    android:text="塑形"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"></TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    style="@style/food_record"
+                    android:text="当前体重(KG)"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"></TextView>
+
+                <TextView
+                    android:id="@+id/tv_current_weight"
+                    android:layout_marginTop="5dp"
+                    android:textSize="16dp"
+                    android:text="75.0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"></TextView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    style="@style/food_record"
+                    android:text="BMI"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"></TextView>
+
+                <TextView
+                    android:id="@+id/tv_BMI"
+                    android:layout_marginTop="5dp"
+                    android:textSize="16dp"
+                    android:text="23.7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"></TextView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="50dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/colorPrimary">
+
+    <Button
+        android:id="@+id/btn_food_add_left"
+        android:background="@drawable/arrow_left"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"></Button>
+
+    <TextView
+        android:id="@+id/tv_food_add_type"
+        android:text="添加"
+        style="@style/food_record"
+        android:layout_toRightOf="@id/btn_food_add_left"
+        android:layout_marginLeft="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"></TextView>
+
+    <TextView
+        android:id="@+id/tv_food_add_finish"
+        android:text="完成"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        style="@style/food_record"
+        android:layout_marginRight="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"></TextView>
+
+    <TextView
+        android:id="@+id/tv_goodsCount"
+        android:text="1"
+        android:textColor="#fff"
+        android:gravity="center"
+        android:background="@drawable/big_red_point"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_toLeftOf="@id/tv_food_add_finish"
+        android:layout_marginRight="-20dp"></TextView>
+
+</RelativeLayout>

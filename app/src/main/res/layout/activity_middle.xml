@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <RadioGroup
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:id="@+id/rg_select_func"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_food"
+            android:text="记饮食"
+            android:drawableTop="@drawable/food"
+            style="@style/MenuRadioButton"></RadioButton>
+
+        <RadioButton
+            android:id="@+id/rb_exercise"
+            android:text="记运动"
+            android:drawableTop="@drawable/exercise"
+            style="@style/MenuRadioButton"></RadioButton>
+
+        <RadioButton
+            android:id="@+id/rb_weight"
+            android:text="记体重"
+            android:drawableTop="@drawable/weight"
+            style="@style/MenuRadioButton"></RadioButton>
+
+        <RadioButton
+            android:id="@+id/rb_my_plan"
+            android:text="我的计划"
+            android:drawableTop="@drawable/sign_in"
+            style="@style/MenuRadioButton"></RadioButton>
+    </RadioGroup>
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></ImageView>
+
+</RelativeLayout>

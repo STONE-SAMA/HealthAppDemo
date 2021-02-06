@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Activity.FoodRecordActivity">
+
+    <com.example.healthappdemo.UI.FoodRecordTopBar
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"></com.example.healthappdemo.UI.FoodRecordTopBar>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/border">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_over_txt"
+                            style="@style/food_record"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center_vertical"
+                            android:text="超支"></TextView>
+
+                        <TextView
+                            android:id="@+id/tv_over"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_over_txt"
+                            android:text="0"
+                            android:textSize="20dp"
+                            android:textStyle="bold"></TextView>
+
+                    </LinearLayout>
+
+                    <com.example.healthappdemo.UI.CircleProgress
+                        android:id="@+id/circle_progress_bar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        app:antiAlias="true"
+                        app:arcWidth="5dp"
+                        app:bgArcColor="#616161"
+                        app:bgArcWidth="5dp"
+                        app:hint="当前摄入"
+                        app:hintSize="15sp"
+                        app:maxValue="2500"
+                        app:startAngle="90"
+                        app:sweepAngle="360"
+                        app:unit="预算2500"
+                        app:unitSize="15sp"
+                        app:value="0"
+                        app:valueSize="25sp" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_sport_txt"
+                            style="@style/food_record"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="运动"></TextView>
+
+                        <TextView
+                            android:id="@+id/tv_sport"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_over_txt"
+                            android:text="0"
+                            android:textSize="20dp"
+                            android:textStyle="bold"></TextView>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rl_breakfast"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="#fff">
+
+                    <TextView
+                        android:id="@+id/tv_breakfast_txt"
+                        style="@style/energy_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:text="早餐"></TextView>
+
+                    <TextView
+                        android:id="@+id/tv_suggest_breakfast"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@id/tv_breakfast_txt"
+                        android:text="建议688-841千卡"></TextView>
+
+
+                    <ImageView
+                        android:id="@+id/iv_breakfast_arrow"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/arrow_right_black"></ImageView>
+
+                    <TextView
+                        android:id="@+id/tv_breakfast_energy_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dp"
+                        android:layout_toLeftOf="@id/iv_breakfast_arrow"
+                        android:text="千卡"></TextView>
+
+                    <TextView
+                        android:id="@+id/tv_breakfast_energy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="3dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_toLeftOf="@id/tv_breakfast_energy_txt"
+                        android:text="123"
+                        android:textColor="@color/colorEnergy"></TextView>
+
+                </RelativeLayout>
+
+                <!--早餐listview-->
+                <com.example.healthappdemo.UI.MyListView
+                    android:id="@+id/lv_breakfast"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@null" />
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_lunch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/draw_top_border">
+
+                    <TextView
+                        android:id="@+id/tv_lunch_txt"
+                        style="@style/energy_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:text="午餐"></TextView>
+
+                    <TextView
+                        android:id="@+id/tv_suggest_lunch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_toRightOf="@id/tv_lunch_txt"
+                        android:text="建议917-1121千卡"></TextView>
+
+
+                    <ImageView
+                        android:id="@+id/iv_lunch_arrow"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/arrow_right_black"></ImageView>
+
+                    <TextView
+                        android:id="@+id/tv_lunch_energy_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dp"
+                        android:layout_toLeftOf="@id/iv_lunch_arrow"
+                        android:text="千卡"></TextView>
+
+                    <TextView
+                        android:id="@+id/tv_lunch_energy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="3dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_toLeftOf="@id/tv_lunch_energy_txt"
+                        android:text="123"
+                        android:textColor="@color/colorEnergy"></TextView>
+
+                </RelativeLayout>
+
+                <!--此处午餐listview-->
+                <com.example.healthappdemo.UI.MyListView
+                    android:id="@+id/lv_lunch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@null" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_dinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/draw_top_border">
+
+                    <TextView
+                        android:id="@+id/tv_dinner_txt"
+                        style="@style/energy_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:text="晚餐"></TextView>
+
+                    <TextView
+                        android:id="@+id/tv_suggest_dinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@id/tv_dinner_txt"
+                        android:text="建议688-841千卡"></TextView>
+
+
+                    <ImageView
+                        android:id="@+id/iv_dinner_arrow"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/arrow_right_black"></ImageView>
+
+                    <TextView
+                        android:id="@+id/tv_dinner_energy_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dp"
+                        android:layout_toLeftOf="@id/iv_dinner_arrow"
+                        android:text="千卡"></TextView>
+
+                    <TextView
+                        android:id="@+id/tv_dinner_energy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="3dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_toLeftOf="@id/tv_dinner_energy_txt"
+                        android:text="123"
+                        android:textColor="@color/colorEnergy"></TextView>
+
+                </RelativeLayout>
+
+                <!--此处晚餐listview-->
+                <com.example.healthappdemo.UI.MyListView
+                    android:id="@+id/lv_dinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@null" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_extra"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/draw_top_border">
+
+                    <TextView
+                        android:id="@+id/tv_extra_txt"
+                        style="@style/energy_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:text="加餐"></TextView>
+
+                    <ImageView
+                        android:id="@+id/iv_extra_arrow"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/arrow_right_black"></ImageView>
+
+                    <TextView
+                        android:id="@+id/tv_extra_energy_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dp"
+                        android:layout_toLeftOf="@id/iv_extra_arrow"
+                        android:text="千卡"></TextView>
+
+                    <TextView
+                        android:id="@+id/tv_extra_energy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="3dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_toLeftOf="@id/tv_extra_energy_txt"
+                        android:text="123"
+                        android:textColor="@color/colorEnergy"></TextView>
+
+                </RelativeLayout>
+
+                <!--此处加餐listview-->
+                <com.example.healthappdemo.UI.MyListView
+                    android:id="@+id/lv_extra"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@null" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_exercise"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/draw_top_border">
+
+                    <TextView
+                        android:id="@+id/tv_exercise_txt"
+                        style="@style/energy_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:text="运动"></TextView>
+
+                    <ImageView
+                        android:id="@+id/iv_exercise_arrow"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/arrow_right_black"></ImageView>
+
+                    <TextView
+                        android:id="@+id/tv_exercise_energy_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dp"
+                        android:layout_toLeftOf="@id/iv_exercise_arrow"
+                        android:text="千卡"></TextView>
+
+                    <TextView
+                        android:id="@+id/tv_exercise_energy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="3dp"
+                        android:layout_toLeftOf="@id/tv_exercise_energy_txt"
+                        android:text="123"
+                        android:textColor="@color/colorEnergy"></TextView>
+
+                </RelativeLayout>
+
+                <!--此处运动listview-->
+                <com.example.healthappdemo.UI.MyListView
+                    android:id="@+id/lv_sport"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@null" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <RadioGroup
+        android:id="@+id/rg_food_record_menu"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/draw_top_border">
+
+        <RadioButton
+            android:drawableTop="@drawable/breakfast"
+            android:text="+早餐"
+            android:textSize="15dp"
+            android:id="@+id/rb_breakfast_add"
+            style="@style/FoodRecordRadioButton">
+        </RadioButton>
+
+        <RadioButton
+            android:drawableTop="@drawable/lunch"
+            android:textSize="15dp"
+            android:text="+午餐"
+            android:id="@+id/rb_lunch_add"
+            style="@style/FoodRecordRadioButton"></RadioButton>
+
+        <RadioButton
+            android:drawableTop="@drawable/dinner"
+            android:textSize="15dp"
+            android:text="+晚餐"
+            android:id="@+id/rb_dinner_add"
+            style="@style/FoodRecordRadioButton"></RadioButton>
+
+        <RadioButton
+            android:drawableTop="@drawable/extra_dish"
+            android:textSize="15dp"
+            android:text="+加餐"
+            android:id="@+id/rb_extraDish_add"
+            style="@style/FoodRecordRadioButton"></RadioButton>
+
+        <RadioButton
+            android:drawableTop="@drawable/sports"
+            android:textSize="15dp"
+            android:text="+运动"
+            android:id="@+id/rb_sports_add"
+            style="@style/FoodRecordRadioButton"></RadioButton>
+
+    </RadioGroup>
+
+
+</LinearLayout>
